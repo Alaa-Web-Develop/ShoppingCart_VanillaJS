@@ -1,0 +1,234 @@
+/*Global Rules===================================*/
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&family=Dancing+Script&family=Irish+Grover&family=Kalam:wght@700&family=Lobster&family=Noto+Kufi+Arabic:wght@200;300;400&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,300&family=Poppins:ital,wght@0,300;1,900&family=Source+Sans+Pro:ital,wght@0,300;1,600&family=Tajawal:wght@400;500&family=Varela+Round&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root{
+--main-color:#ffa500;
+}
+html{
+scroll-behavior: smooth;
+font-size: 62.5%;
+overflow-x: hidden;
+scroll-padding-top: 6rem;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2rem;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    color: black;
+    transition: all .2s linear;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+*::selection{
+    background-color: var(--main-color);
+}
+
+/*===header===============================================*/
+header{
+background-color: rgba(51, 51, 51, 0.856);
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 2rem 9%;
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+z-index: 10000;
+}
+header .logo{
+    color: #FFF;
+}
+
+.logo span{
+    color: var(--main-color);
+    font-size: 3rem;
+    font-weight: bold;
+}
+nav a{
+    color: #FFF;
+    font-size: 1.7rem;
+    margin: 0 .6rem;
+}
+
+nav a:hover{
+    color:var(--main-color);
+    text-decoration:underline;
+}
+.icons i{
+color: #FFF;
+margin-right: 1rem;
+cursor: pointer;
+}
+@media (max-width:768px){
+    header{
+        flex-direction: column;
+    }
+    nav a{
+        margin: 0 .8rem;
+    }
+}
+.icons i:hover{
+    color:var(--main-color);
+}
+.head-frm{
+    position: absolute;
+    top:100% ;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.856);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    z-index: 20000;
+    border-top: .1rem solid rgba(0, 0, 0, 0.24);
+
+    /*clip path*/
+    clip-path: polygon(0 0 ,100% 0,100% 0,0 0);
+}
+
+.head-frm.active{
+    clip-path: polygon(0 0 ,100% 0,100% 100%,0 100%);
+}
+#srch{
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    outline: none;
+    font-size: 2rem;
+}
+.head-frm label{
+    margin-left: 1rem;
+    color: #FFF;
+    font-size: 2rem;
+}
+.head-frm label:hover{
+    color: var(--main-color);
+}
+.contfirs{
+    margin-top: 120px;}
+
+@media (max-width:768px){
+    .contfirs{
+        margin-top: 160px;
+    }
+}
+
+/*=======================cart===========*/
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+@media (max-width:768px){
+    .cart-row{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
